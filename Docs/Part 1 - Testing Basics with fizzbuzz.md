@@ -92,8 +92,8 @@ Assert.AreEqual("1", result);
 ---
 [^1]: It may seem a bit backward, but the first argument is the expected value, and the second is the actual result we want to check. If you invert them, the test will still work as expected, but the error message in case of a failure will be a bit confusing.
 
-Example:
-```csharp
-Assert.AreEqual("1", result); // Assert.AreEqual failed. Expected:<1>. Actual:<SomethingElse>. 
-Assert.AreEqual(result, "1"); // Assert.AreEqual failed. Expected:<SomethingElse>. Actual:<1>.
-```
+    Example:
+    ```csharp
+    Assert.AreEqual("1", result); // Assert.AreEqual failed. Expected:<1>. Actual:<SomethingElse>. 
+    Assert.AreEqual(result, "1"); // Assert.AreEqual failed. Expected:<SomethingElse>. Actual:<1>.
+    ```
