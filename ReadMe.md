@@ -10,10 +10,12 @@ It's encouraged to try and use this repository to practice the content of the wo
 
 This parts uses FizzBuzz as an example to build the foundational knowledge on unit testing, like test structure, objectives, naming conventions, test parametrization and general patterns and good practices.
 
+[Part 1 guide](./Docs/Part%201%20-%20Testing%20Basics%20with%20fizzbuzz.md)
+
 ## Part 2 - Complex inputs
 
 This section uses an access control code that expects a `User` object and returns a `boolean` indicating if the user can access a facility or not.
-Here we'll discuss how to create and manage data for our tests, how to use our test code as an example of code usage by making the test code reflect each use case being tested. We'll also have an introduction to AutoFixture and how we can use it to create meaningful data for our tests.
+Here we'll discuss how to create and manage data for our tests. How to use our test code as an example of code usage by making the test code reflect each use case being tested. We'll also have an introduction to AutoFixture and how we can use it to create meaningful data for our tests.
 We'll also verify how can we test for exceptions.
 
 ## Part 3 - Handling dependencies
