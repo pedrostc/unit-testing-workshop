@@ -5,20 +5,17 @@ namespace TestBootcamp._3_Mocking;
 public class AccessController
 {
     private readonly IUserRepository _userRepository;
+    private readonly ILogger _logger;
 
-    public AccessController(IUserRepository userRepository)
+    public AccessController(IUserRepository userRepository, ILogger logger)
     {
         _userRepository = userRepository;
+        _logger = logger;
     }
 
     public bool CanEnter(Guid userId)
     {
         var user = GetUser(userId);
-
-        if (user.Id != userId)
-        {
-            return true;
-        }
         
         return CanUserEnter(user);
     }
@@ -30,6 +27,12 @@ public class AccessController
 
     private bool CanUserEnter(User user)
     {
+        if (user.MissingRequireData)
+        {
+            _logger.LogInformation("User is missing data");
+            _logger.LogInformation("Yup it is");
+        }
+
         return !user.MissingRequireData && (user.Age >= 21 || user.LastName == "Smith");
     }
 }

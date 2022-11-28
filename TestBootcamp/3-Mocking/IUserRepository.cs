@@ -5,4 +5,6 @@ namespace TestBootcamp._3_Mocking;
 public interface IUserRepository
 {
     User GetUserById(Guid id);
+
+    void DoTheThing(User user);
 }
